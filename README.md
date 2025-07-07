@@ -1,11 +1,8 @@
-# umlib_admin
-Theme development environment:
-- Drupal version: 10.1.6
-- Claro version: 10.1.6
+# umlib_theme
 
 Please contact burkebri@umich.edu if you notice any updates or changes needed based on your installed Drupal version.
 
-This is the admin drupal theme for U-M Library sites built using the Claro admin theme as a parent. The umlib_admin theme uses styles from the U-M Library Design System.
+This is a drupal theme for U-M Library sites. The umlib_theme uses styles from the U-M Library Design System.
 
 ## Regions & Blocks
 Coming soon: block configuration- in the meantime, please use the below as a start.
@@ -31,7 +28,7 @@ Region: Content:
 - Primary admin actions
 - Main content
 
-For more information, see the Drupal umlib_admin Figma file. Ask Bridget for permission as needed.
+For more information, see the Drupal umlib_theme Figma file. Ask Bridget for permission as needed.
 
 ## Website header
 
@@ -58,15 +55,15 @@ and add the following below your drupal line in repositories
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-         "umlib_admin-theme": {
+         "umlib_theme": {
              "type": "package",
              "package": {
-                 "name": "mlibrary/umlib_admin",
+                 "name": "mlibrary/umlib_theme",
                  "version": "1.0",
                  "type": "drupal-theme",
                  "dist": {
                      "type": "zip",
-                     "url": "https://github.com/mlibrary/umlib_admin/archive/refs/heads/main.zip",
+                     "url": "https://github.com/mlibrary/umlib_theme/archive/refs/heads/main.zip",
                      "reference": "main"
                  }
              }
@@ -102,7 +99,7 @@ You may also wish to alter what directory the theme is installed in
 You can now run the following to get the latest version of the umlib_base theme
 
 ```
-composer require mlibrary/umlib_admin
+composer require mlibrary/umlib_theme
 ```
 
 ### Update
@@ -110,6 +107,6 @@ composer require mlibrary/umlib_admin
 To get the lastest version in an existing project, you unfortunately cannot simply run composer update. Instead run
 
 ```
-composer clear-cache
+composer clearcache
 composer reinstall mlibrary/umlib_admin
 ```
