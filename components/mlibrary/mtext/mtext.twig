@@ -1,0 +1,15 @@
+{% if style == "title" %}
+<h1{{ attributes.addClass('title') }}>{{ text }}</h1>
+
+{% elseif style == "label" %}
+<strong{{ attributes }}>{{ text }}</strong>
+
+{% elseif style == "list" %}
+<li{{ attributes }}>{{ text }}</li>
+
+{% elseif style == "long" %}
+{{ text }}
+
+{% else %}
+<span{{ attributes }}>{{ text }}</span>
+{% endif %}

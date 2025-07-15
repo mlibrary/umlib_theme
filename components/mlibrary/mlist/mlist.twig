@@ -1,0 +1,16 @@
+{% if multi %}
+<ul{{ attributes }}>
+{% endif %}
+{% for item in list %}
+  {% if multi %}
+    {{ include('umlib_theme:mtext', {
+      text: item.content,
+      style: "list",
+    }, with_context = false) }}
+  {% else %}
+    <div>{{ item.content }}</div>
+  {% endif %}
+{% endfor %}
+{% if multi %}
+</ul>
+{% endif %}

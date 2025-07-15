@@ -53,6 +53,26 @@
   <div class="viewport-container">
     {{ page.breadcrumb }}
     {{ page.pre_content }}
+
+{#DELETE#}
+{% set alert = 'Testing the mbanner sdc component located at
+themes/contrib/umlib_theme/components/mlibrary/mbanner
+and added to
+themes/contrib/umlib_theme/templates/page.html.twig.' %}
+
+{{ include('umlib_theme:mbanner', {
+  style: 'warning',
+  text: alert,
+}, with_context = false) }}
+<p>
+Edit as needed and be sure to CLEAR CACHE at either<br>
+<em><a href="admin/config/development/performance">admin/config/development/performance</a></em><br>
+or use <em>drush cr</em> at the docker container root to see changes.<br>
+<br>
+View HTML source code to find template to override for sdc.
+</p>
+{#END DELETE#}
+
     <main class="page-content clearfix" role="main">
       <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
       {{ page.highlighted }}

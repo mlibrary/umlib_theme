@@ -1,0 +1,29 @@
+name: MText
+status: stable
+description: A text element
+props:
+  type: object
+  required:
+    - text
+  properties:
+    text:
+      type: string
+      title: Text
+      description: Text.
+      examples: ['Some text']
+    style:
+      type: string
+      title: Style
+      description: The text style to use.
+      enum:
+        - title
+        - label
+        - list
+        - long
+        - plain
+      examples: [title, label, list, long, plain]
+libraryOverrides:
+  css:
+    component:
+      mtext.css: {}
+      ../mlibrary.css: {}

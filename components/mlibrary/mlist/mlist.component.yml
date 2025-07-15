@@ -1,0 +1,27 @@
+name: MList
+status: stable
+description: A list element
+props:
+  type: object
+  required:
+    - list
+  properties:
+    list:
+      type: array
+      title: 'List'
+      description: 'A list of objects.'
+      items:
+        type: object
+        properties:
+          content:
+            type: object
+            title: Content
+    multi:
+      type: boolean
+      title: 'Has Multiple Values?'
+      description: 'If true the prop has multiple values.'
+libraryOverrides:
+  css:
+    component:
+      mlist.css: {}
+      ../mlibrary.css: {}

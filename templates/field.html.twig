@@ -1,0 +1,98 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{#DELETE#}
+{% set alert = 'SDC FIELD OVERRIDE
+Testing a field with sdc component located at
+themes/contrib/umlib_theme/components/mlibrary/mlist
+Here it is added to
+themes/contrib/umlib_theme/templates/field.html.twig.' %}
+
+{{ include('umlib_theme:mbanner', {
+  style: 'info',
+  text: alert,
+}, with_context = false) }}
+{#END DELETE#}
+
+{#KEEP#}
+<div class="field">
+{% if not label_hidden %}
+{#DELETE#}
+{% set alert = 'SDC LABEL OVERRIDE
+Testing a field label with sdc component located at
+themes/contrib/umlib_theme/components/mlibrary/mtext.
+Here it is added to
+themes/contrib/umlib_theme/templates/field.html.twig.' %}
+{{ include('umlib_theme:mbanner', {
+  style: 'info',
+  text: alert,
+}, with_context = false) }}
+{#END DELETE#}
+
+{{ include('umlib_theme:mtext', {
+  text: label,
+  style: "label",
+}, with_context = false) }}
+{% endif %}
+
+{#DELETE#}
+{% set alert = 'SDC LIST OVERRIDE
+Testing a field list with sdc component located at
+themes/contrib/umlib_theme/components/mlibrary/mlist.
+Here it is added to
+themes/contrib/umlib_theme/templates/field.html.twig.' %}
+{{ include('umlib_theme:mbanner', {
+  style: 'info',
+  text: alert,
+}, with_context = false) }}
+{#END DELETE#}
+
+{{ include('umlib_theme:mlist', {
+  list: items,
+  multi: true,
+}, with_context = false) }}
+</div>
+{#END KEEP#}
+
+{#DELETE#}
+{{ include('umlib_theme:mbanner', {
+  style: 'info',
+  text: 'END OF SDC FIELD OVERRIDE',
+}, with_context = false) }}
+{#END DELETE#}

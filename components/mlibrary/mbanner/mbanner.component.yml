@@ -1,0 +1,27 @@
+name: MBanner
+status: stable
+description: A banner element
+props:
+  type: object
+  required:
+    - text
+    - style
+  properties:
+    text:
+      type: string
+      title: Text
+      description: The banner text.
+      examples: ['Some banner text']
+    style:
+      type: string
+      title: Style
+      description: The banner style to use.
+      enum:
+        - info
+        - warning
+      examples: [info, warning]
+libraryOverrides:
+  css:
+    component:
+      mbanner.css: {}
+      ../mlibrary.css: {}

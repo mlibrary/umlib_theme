@@ -1,0 +1,4 @@
+{{ include('umlib_admin_test:mtext', {
+  text: items,
+  style: "long",
+}, with_context = false) }}
