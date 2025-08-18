@@ -23,6 +23,10 @@
  * @see node_preprocess_field__node()
  *
  * @todo Delete as part of https://www.drupal.org/node/3015623
+ *
+ *
+ * NOTE: this is set as a title at the page-title level.
+ * If you dont use node title as the page title it will need to be altered to avoid duplication.
  */
 #}
 {#DELETE#}
@@ -39,10 +43,12 @@ themes/contrib/umlib_theme/templates/field--node--title.html.twig.' %}
 {#END DELETE#}
 
 {#KEEP#}
+{% if items.0.content is not empty %}
 {{ include('umlib_theme:mtext', {
   text: items.0.content,
-  style: "title",
+  style: "plain",
 }, with_context = false) }}
+{% endif %}
 {#END KEEP#}
 
 {#DELETE#}

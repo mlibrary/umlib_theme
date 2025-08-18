@@ -12,8 +12,14 @@
  *   displayed after the main title tag that appears in the template.
  */
 #}
+
 {{ title_prefix }}
-{% if title %}
+{% if title['#markup'] or title|render|striptags|replace({'\n': '', '\r': ''}) is not empty %}
+{{ include('umlib_theme:mtext', {
+  text: title,
+  style: "title",
+}, with_context = false) }}
+{% else %}
   {{ title }}
 {% endif %}
 {{ title_suffix }}

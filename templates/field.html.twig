@@ -83,9 +83,13 @@ themes/contrib/umlib_theme/templates/field.html.twig.' %}
 }, with_context = false) }}
 {#END DELETE#}
 
+{% set multi = false %}
+{% if items.1.content %}
+{% set multi = true %}
+{% endif %}
 {{ include('umlib_theme:mlist', {
   list: items,
-  multi: true,
+  multi: multi,
 }, with_context = false) }}
 </div>
 {#END KEEP#}
