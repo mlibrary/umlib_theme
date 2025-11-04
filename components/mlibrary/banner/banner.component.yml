@@ -1,0 +1,23 @@
+name: Banner
+status: stable
+description: 'Design system alert banner component for informational and warning messages'
+props:
+  type: object
+  properties:
+    type:
+      type: string
+      title: Banner Type
+      description: Visual style of the banner
+      enum:
+        - info
+        - warning
+      default: 'info'
+    message:
+      type: string
+      title: Message
+      description: Banner message text
+      default: 'Add your message here.'
+libraryOverrides:
+  css:
+    component:
+      banner.css: {}

@@ -49,28 +49,66 @@
       </div>
     </div>
   </header>
+  
+{# Informational banner (default) #}
+{{ include('umlib_theme:banner', {
+  message: 'Add your message here.'
+}) }}
 
-  <div class="viewport-container">
-    {{ page.breadcrumb }}
-    {{ page.pre_content }}
+{# Warning banner #}
+{{ include('umlib_theme:banner', {
+  type: 'warning',
+  message: 'This site will not be available from 5pm on Friday, March 1 through the morning of Sunday, March 3.'
+}) }}
 
 {#DELETE#}
-{% set alert = 'Testing the mbanner sdc component located at
-themes/contrib/umlib_theme/components/mlibrary/mbanner
-and added to
-themes/contrib/umlib_theme/templates/page.html.twig.' %}
+{% set alert = 'Testing the mbanner sdc component located at themes/contrib/umlib_theme/components/mlibrary/mbanner and added to themes/contrib/umlib_theme/templates/page.html.twig.' %}
 
 {{ include('umlib_theme:mbanner', {
   style: 'warning',
   text: alert,
 }, with_context = false) }}
-<p>
-Edit as needed and be sure to CLEAR CACHE at either<br>
+
+  <div class="viewport-container">
+    {{ page.breadcrumb }}
+    {{ page.pre_content }}
+
+<p>Edit as needed and be sure to CLEAR CACHE at either<br>
 <em><a href="admin/config/development/performance">admin/config/development/performance</a></em><br>
 or use <em>drush cr</em> at the docker container root to see changes.<br>
 <br>
 View HTML source code to find template to override for sdc.
 </p>
+{#END DELETE#}
+
+{# Modal Test DELETE#}
+{# Small modal #}
+{{ include('umlib_theme:modal', {
+  id: 'small-modal',
+  heading: 'Small Modal',
+  size: 'small',
+  content: '<p>This is a small modal.</p>'
+}) }}
+
+{# Medium modal (default) #}
+{{ include('umlib_theme:modal', {
+  id: 'medium-modal',
+  heading: 'Medium Modal',
+  content: '<p>This is a medium modal.</p>'
+}) }}
+
+{# Large modal #}
+{{ include('umlib_theme:modal', {
+  id: 'large-modal',
+  heading: 'Large Modal',
+  size: 'large',
+  content: '<p>This is a large modal with more content.</p>'
+}) }}
+
+<button class="button button--primary" type="button" data-modal-trigger="small-modal">Open Small Modal</button>
+<button class="button button--secondary" type="button" data-modal-trigger="medium-modal">Open Medium Modal</button>
+<button class="button button--ghost" type="button" data-modal-trigger="large-modal">Open Large Modal</button>
+
 {#END DELETE#}
 
     <main class="page-content clearfix" role="main">

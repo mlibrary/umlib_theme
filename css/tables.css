@@ -1,4 +1,29 @@
+/**
+* U-M Library Design System - Tables
+*
+* Table of Contents:
+* 1. Tables
+**/
+
+/* 1. Tables */
+
 /* Tables */
+
+th {
+  background-color: var(--color-teal-100);
+}
+
+.sortable-heading.is-active > a {
+  color: var(--color-teal-400);
+}
+
+.sortable-heading.is-active > a::before {
+  border-bottom: 0.1875rem solid var(--color-teal-400);
+}
+
+tr:hover {
+  background-color: var(--color-maize-100);
+}
 
 /*Override the Claro table, tbody, and trow background color */
 table.views-table {

@@ -1,0 +1,31 @@
+/**
+* U-M Library Design System - Breadcrumb
+*
+* Table of Contents:
+* 1. Breadcrumb
+**/
+
+/* 1. Breadcrumb*/
+
+.breadcrumb {
+  font-size: 1rem;
+  font-weight: var(--regular);
+  padding-top: 1.5rem;
+}
+
+.breadcrumb__item::before {
+  font-size: 1rem;
+}
+
+.breadcrumb__item, .breadcrumb__link {
+  color: var(--color-teal-400);
+  font-weight: var(--regular);
+}
+
+.breadcrumb__link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb__item:last-child > a {
+  color: var(--color-text);
+}

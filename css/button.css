@@ -1,0 +1,80 @@
+/**
+* U-M Library Design System - Button
+*
+* Table of Contents:
+* 1. Button
+* 2. Primary
+* 3. Secondary, Critical, Ghost, Search
+*
+*/
+
+/* 1. Buttons */
+
+button,
+.button {
+ border: none;
+ outline: none;
+ font-weight: 700;
+ font-family: var(--font-base-family);
+ border-radius: var(--radius-default);
+}
+
+ btn-group {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+button:focus,
+.button:focus {
+ outline: 0 !important;
+ box-shadow: 0 0 0 2px var(--color-maize-400),
+  0 0 0 3px var(--color-neutral-400) !important;
+ border-radius: 2px !important;
+}
+
+button:not([disabled]):active, .button:not([disabled]):focus, .button:not([disabled]):hover {
+  box-shadow: 0 0 0 2px #fff,0 0 0 3px var(--color-neutral-400);
+}
+
+ button:disabled,.button:disabled {
+ opacity: 0.75;
+ cursor: not-allowed;
+}
+
+/* 2. Button - Primary */
+
+.button--primary {
+  color: var(--button-fg-color--primary);
+  background-color: var(--button-bg-color--primary);
+}
+
+.button--primary:hover {
+  color: #fff;
+  background-color: var(--button--hover-bg-color--primary);
+}
+
+/* 2. Button - Search, Secondary, Critical, Ghost */
+
+input[value="Search"], .button--search, input[value="Search"]:hover , .button--search:hover  {
+  color: var(--button-fg-color);
+  background-color: var(--color-maize-400);
+}
+
+.button--secondary {
+  background: var(--color-neutral-100);
+  color: var(--color-neutral-400);
+ }
+ 
+ .button--critical {
+  background: var(--color-pink-500);
+  color: #fff;
+ }
+ 
+ .button--outline,
+ .button--ghost {
+  background: none;
+  border: solid 1px;
+  color: var(--color-neutral-400);
+ }

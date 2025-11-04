@@ -1,0 +1,30 @@
+name: Modal
+status: stable
+props:
+  type: object
+  properties:
+    id:
+      type: string
+      default: 'dialog'
+    heading:
+      type: string
+      default: 'Dialog heading'
+    content:
+      type: string
+      title: Body Content
+    size:
+      type: string
+      title: Modal Size
+      enum:
+        - small
+        - medium
+        - large
+      default: 'medium'
+libraryOverrides:
+  css:
+    component:
+      modal.css: {}
+  js:
+    modal.js: {}
+  dependencies:
+    - core/drupal

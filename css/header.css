@@ -1,0 +1,117 @@
+/**
+* U-M Library Design System - Header
+*
+* Table of Contents:
+* 1. Header
+**/
+
+/* 1. Website Header */
+.website-header {
+  padding-top: var(--space-medium);
+  padding-bottom: var(--space-medium);
+  border-bottom: solid 2px var(--color-neutral-100);
+  background: white;
+}
+
+a.site-logo {
+  margin-right: var(--space-medium);
+  display: inline-block;
+  line-height: 0;
+}
+
+.site-name a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-neutral-300);
+  text-decoration: none;
+  line-height: 0;
+  font-size: var(--text-medium);
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.site-name a:hover {
+  text-decoration: underline;
+}
+
+.website-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.website-header_inner-container div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Dark website header */
+
+.website-header-dark {
+  background: var(--color-blue-400);
+}
+
+.website-header-dark .site-name a {
+  color: var(--color-blue-100);
+}
+
+.website-header-dark ul.menu a {
+  color: var(--color-blue-100);
+}
+
+/* Adds styling for the status message in header */
+.umlib-messages div, .umlib-messages div div {
+  display: block !important;
+}
+
+.umlib-messages {
+  width: 100%;
+}
+
+.umlib-messages > div> div {
+  margin-top: 1rem;
+  padding: 8px;
+  background: var(--color-teal-100);
+  border-left: solid 2px var(--color-teal-400);
+}
+
+/* Responsive layout for website header */
+
+@media (max-width: 745px) {
+  .site-name a {
+    padding-top: 1rem;
+  }
+
+  .region-header > .menu--account > ul.menu {
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 1rem;
+    }
+
+  .region-header > .menu--account > ul.menu > li  {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+
+/* 2 User menu layout */
+
+.region-header > .menu--account h2 {
+  display: none;
+}
+
+.region-header > .menu--account > ul.menu > li {
+  display: inline;
+  list-style: none;
+  padding: 0 .5rem;
+}
+
+/* 3. Account menu */
+
+ul.menu a.is-active {
+  color: var(--color-teal-400);
+}

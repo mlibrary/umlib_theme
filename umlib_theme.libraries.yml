@@ -2,15 +2,26 @@ global-styling:
   version: 1.x
   css:
     theme:
+      css/accessibility.css: {}
+      css/badge.css: {}
       css/base.css: {}
-      css/tokens.css: {}
-      css/layout.css: {}
+      css/breadcrumb.css: {}
+      css/button.css: {}
+      css/details.css: {}
+      css/field.css: {}
+      css/footer.css: {}
       css/forms.css: {}
-      css/tables.css: {}
-      css/component.css: {}
-      css/navigation.css: {}
-      css/utilities.css: {}
+      css/header.css: {}
       css/icons.css: {}
+      css/pagination.css: {}
+      css/skiplink.css: {}
+      css/statusmessages.css: {}
+      css/tables.css: {}
+      css/tabs.css: {}
+      css/tag.css: {}
+      css/tokens.css: {}
+      css/utilities.css: {}
+      css/views.css: {}
 global-scripts:
   version: 1.x
   js:

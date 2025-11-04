@@ -24,4 +24,3 @@ libraryOverrides:
   css:
     component:
       mbanner.css: {}
-      ../mlibrary.css: {}

@@ -1,0 +1,31 @@
+/**
+* U-M Library Design System - Pagination/Pager
+*
+* Table of Contents:
+* 1. Pagination
+**/
+
+/* 1. Pagination Pager */
+
+.pager__link, .pager__item--current {
+  border-radius: 4px;
+}
+
+.pager__link.is-active, .pager__item--current {
+  background-color: var(--color-teal-400);
+}
+
+li.pager__item.pager__item--mini.pager__item--current {
+  background-color: var(--color-teal-400);
+}
+
+.pager__link:hover {
+  background-color: var(--pager--hover-bg-color);
+}
+
+.pager__link.is-active:hover {
+  color: #fff;
+  background-color: var(--pager--hover-bg-color);
+  box-shadow: 0 0 0 2px var(--color-maize-400),
+    0 0 0 3px var(--color-neutral-400) !important;
+}

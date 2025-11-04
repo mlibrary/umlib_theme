@@ -1,4 +1,10 @@
-/* Forms */
+/**
+* U-M Library Design System - Forms
+*
+* Table of Contents:
+* 1. Forms
+* 2. Inputs
+**/
 
 .form-item__label, 
 .fieldset__legend--composite {
@@ -18,4 +24,204 @@
   padding: 0.15rem;
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+/* Inputs - Checkbox & Radios */
+
+.form-boolean--type-checkbox:checked, .form-boolean--type-checkbox:checked:hover {
+  border-color: var(--input--focus-border-color);
+  background-color: var(--input--focus-border-color);
+  box-shadow: none;
+}
+
+.form-boolean--type-checkbox[disabled]:checked {
+  background-color: var(--color-neutral-100);
+  cursor: not-allowed;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+label {
+  color: var(--color-neutral-300);
+  font-size: 1rem;
+  font-weight: var(--bold);
+  display: block;
+  margin-bottom: 0.5rem;
+  padding-top: .5rem;
+}
+
+.input-description-text {
+  color: var(--color-neutral-300);
+  font-size: 1rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="time"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
+  border: solid 1px var(--color-neutral-200);
+  padding: 0.5rem 0.75rem;
+  border-radius: 2px;
+  accent-color: var(--color-teal-400);
+}
+
+textarea {
+  font-family: var(--font-base-family);
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  max-width: 100%;
+  line-height: 1.5;
+  border: solid 1px var(--color-neutral-200);
+  padding: 0.75rem;
+  border-radius: 2px;
+}
+
+input::placeholder {
+  font-family: var(--font-base-family);
+  color: var(--color-neutral-400);
+  font-size: 0.95rem;
+}
+
+/* File Upload */
+
+input::file-selector-button {
+  border: none;
+  outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 0.75rem;
+  font-size: 1rem;
+  min-height: 2.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: var(--font-base-family);
+  border-radius: var(--radius-default);
+  background: var(--color-teal-400);
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+input[type="file"]:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/* Select */
+
+:root {
+  --icon-arrow-down: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>');
+}
+
+.select-label {
+  color: var(--color-neutral-300);
+  font-size: 1rem;
+  font-weight: var(--bold);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+select {
+  min-width: 15ch;
+  padding: 0 1.75rem 0 1.5rem;
+  height: 40px;
+  font-size: 1rem;
+  font-family: var(--font-base-family);
+  color: #262626;
+  line-height: 1.5;
+  box-shadow: none;
+  cursor: pointer;
+  max-width: 100%;
+  border: solid 1px var(--color-neutral-200);
+  border-radius: 2px;
+  text-overflow: ellipsis;
+  background-color: white;
+  background-image: var(--icon-arrow-down);
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  background-position: center right 0.5rem;
+  appearance: none;
+}
+
+/* Checkboxes */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  margin-bottom: 0.5rem;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--color-teal-400);
+  width: 18px;
+  height: 18px;
+  margin-right: 0.75rem;
+}
+
+.checkbox-option {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+.checkbox-option > label {
+  font-family: var(--font-base-family);
+  color: var(--color-neutral-400);
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: none;
+  display: block;
+}
+
+/* Radios */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  margin-bottom: 0.5rem;
+}
+
+input[type="radio"] {
+  accent-color: var(--color-teal-400);
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.75rem;
+}
+
+.radio-option {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+.radio-option > label {
+  font-family: var(--font-base-family);
+  color: var(--color-neutral-400);
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: none;
+  display: block;
 }

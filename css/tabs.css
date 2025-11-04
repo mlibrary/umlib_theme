@@ -1,0 +1,50 @@
+/**
+* U-M Library Design System - Tabs
+*
+* Table of Contents:
+* 1. Tabs: Horizontal
+* 2. Tabs: Vertical
+**/
+
+
+/* 1. Tabs - Horizontal */
+
+.tabs__link.is-active {
+  color: var(--color-teal-400);
+}
+
+.is-horizontal .tabs__link.is-active::before {
+  border-right: none;
+  border-bottom: var(--tabs--active-height) solid var(--color-teal-400);
+  border-left: none;
+}
+
+.is-horizontal .tabs__link:hover {
+  color: var(--color-teal-400);
+  background: var(--tabs--hover-bg-color);
+}
+
+nav.tabs-wrapper.is-horizontal.is-collapsible.position-container.is-horizontal-enabled {
+  border-bottom: solid 1px var(--color-teal-100);
+}
+
+/* 2. Tabs - Vertical */
+
+.vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link {
+  color: var(--color-teal-400);
+}
+
+.vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover {
+  color: var(--color-teal-400);
+  background-color: var(--color-teal-100);
+}
+
+.vertical-tabs__menu-link:hover {
+  text-decoration: none;
+  color: var(--color-teal-400);
+  background-color: var(--color-teal-100);
+}
+
+.tabs__tab.is-active::before {
+  border-left: 3px solid var(--color-teal-400);
+}

@@ -1,0 +1,48 @@
+/**
+* U-M Library Design System - Tag 
+*
+* Table of Contents:
+* 1. Tag
+**/
+
+/* 1. Tag */
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-neutral-400);
+  background-color: var(--color-teal-100);
+  border: solid 2px var(--color-teal-200);
+  border-radius: 16px;
+  padding: 4px 10px;
+  height: 2rem;
+}
+
+.tag:hover {
+  border: solid 2px var(--color-teal-400);
+}
+
+.tag:active {
+  background-color: var(--color-teal-400);
+  color: #fff;
+  border: solid 2px var(--color-teal-400);
+}
+
+button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.tag[aria-pressed="true"] {
+  background-color: var(--color-teal-400);
+  color: #fff;
+  border: solid 2px var(--color-teal-400);
+}
+
+.tag-group {
+  display: flex;
+  width: 400px;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}

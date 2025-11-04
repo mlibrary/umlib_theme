@@ -1,0 +1,43 @@
+/**
+* U-M Library Design System - Banner
+**/
+
+.banner {
+  color: var(--color-neutral-400);
+  padding: 0.5rem 0;
+}
+
+.banner__inner-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.banner__inner-container > p {
+  margin: 0;
+}
+
+.banner__inner-container > svg {
+  flex-shrink: 0;
+}
+
+.banner--warning {
+  background-color: var(--color-orange-300);
+}
+
+.banner--info {
+  background-color: var(--color-teal-200);
+}
+
+.banner > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.banner > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.banner + .banner {
+  border-top: 1px solid var(--color-neutral-400);
+}

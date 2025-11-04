@@ -1,0 +1,52 @@
+/**
+* U-M Library Design System - Details and Accordion
+*
+* Table of Contents:
+* 1. Details and accordion (Claro)
+**/
+
+/* 1. Badge */
+
+
+/* Details & Accordion */
+
+ .claro-details__summary:hover {
+  color: var(--color-teal-400);
+  background: var(--tabs--hover-bg-color);
+ }
+
+ .claro-details[open] > .claro-details__summary {
+  border-left: solid 2px var(--color-teal-400);
+  border-bottom: solid .5px var(--color-neutral-100);
+ }
+
+ @media screen and (min-width: 48em) {
+  .claro-details__wrapper {
+    margin: var(--space-m) var(--details-desktop-wrapper-padding-start);
+  }
+ }
+
+.claro-details__summary:active {
+  color: var(--color-teal-400);
+ }
+
+.claro-details__summary::after {
+  color: var(--color-teal-400);
+  box-shadow: none !important; /* Removes green active box-shadow*/
+}
+
+[open] > .claro-details__summary--accordion:not(:focus,:active)::after, [open] > .claro-details__summary--accordion-item:not(:focus,:active)::after, [open] > .claro-details__summary--vertical-tabs-item:not(:focus,:active)::after {
+  opacity: 1;
+  border: var(--details-summary-focus-border-size) solid var(--color-teal-400);
+  border-width: 0 0 0 var(--details-summary-focus-border-size);
+  box-shadow: none;
+  color: var(--color-teal-400);
+}
+
+[open] .claro-details__summary--accordion, [open] .claro-details__summary--accordion-item, [open] .claro-details__summary--vertical-tabs-item {
+  color: var(--color-teal-400);
+}
+
+.claro-details[open] > .claro-details__summary:focus {
+  color: var(--color-teal-400);
+}
