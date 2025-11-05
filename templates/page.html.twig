@@ -50,24 +50,11 @@
     </div>
   </header>
   
-{# Informational banner (default) #}
-{{ include('umlib_theme:banner', {
-  message: 'Add your message here.'
-}) }}
-
 {# Warning banner #}
 {{ include('umlib_theme:banner', {
   type: 'warning',
-  message: 'This site will not be available from 5pm on Friday, March 1 through the morning of Sunday, March 3.'
+  message: 'This site is the development site for umlib_theme.'
 }) }}
-
-{#DELETE#}
-{% set alert = 'Testing the mbanner sdc component located at themes/contrib/umlib_theme/components/mlibrary/mbanner and added to themes/contrib/umlib_theme/templates/page.html.twig.' %}
-
-{{ include('umlib_theme:mbanner', {
-  style: 'warning',
-  text: alert,
-}, with_context = false) }}
 
   <div class="viewport-container">
     {{ page.breadcrumb }}
@@ -75,12 +62,10 @@
 
 <p>Edit as needed and be sure to CLEAR CACHE at either<br>
 <em><a href="admin/config/development/performance">admin/config/development/performance</a></em><br>
-or use <em>drush cr</em> at the docker container root to see changes.<br>
-<br>
-View HTML source code to find template to override for sdc.
-</p>
+or use <em>drush cr</em> at the docker container root to see changes.</p>
 {#END DELETE#}
 
+<h2>SDC Testing</h2>
 {# Modal Test DELETE#}
 {# Small modal #}
 {{ include('umlib_theme:modal', {
