@@ -107,7 +107,7 @@ a.link-undecorated:hover {
 /* 3. Typography and text  */
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
   padding-top: 1.75rem;
   padding-bottom: 1.125rem;
@@ -124,6 +124,7 @@ h1 {
 .page-title {
   padding-top: 1.75rem;
   padding-bottom: 0.125rem;
+  font-size: 1.95rem;
 }
 
 .block-page-title-block:last-child {
@@ -195,8 +196,7 @@ kbd {
   white-space: nowrap;
 }
 
-ul,
-[role="list"] {
+ul.list-style-none {
   padding: 0;
   list-style: none;
 }
