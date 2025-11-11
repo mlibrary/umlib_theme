@@ -158,6 +158,10 @@ select {
   appearance: none;
 }
 
+select[multiple] {
+    height: 100%;
+}
+
 /* Checkboxes */
 
 fieldset {
@@ -175,6 +179,7 @@ input[type="checkbox"] {
   width: 18px;
   height: 18px;
   margin-right: 0.75rem;
+  border-color: var(--color-neutral-500);
 }
 
 .checkbox-option {
@@ -209,6 +214,7 @@ input[type="radio"] {
   width: 1rem;
   height: 1rem;
   margin-right: 0.75rem;
+  border-color: var(--color-neutral-500);
 }
 
 .radio-option {
