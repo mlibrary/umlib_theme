@@ -20,7 +20,8 @@
 }
 
 .site-name a {
-  display: inline-flex;
+  display: flex;
+  flex-flow: row wrap;
   align-items: center;
   color: var(--color-neutral-300);
   text-decoration: none;
@@ -136,12 +137,12 @@
 
 /* Responsive layout for website header */
 
-@media (max-width: 745px) {
+@media (max-width: 666px) {
   .site-name a {
     padding-top: 1rem;
   }
 
-  .site-name > span {
+  .site-name a > span {
     padding: 1rem 0;
   }
 
@@ -178,7 +179,6 @@
   border-left: solid 2px var(--color-teal-400);
 }
 
-
 /* 2 User menu layout */
 
 .region-header > .menu--account h2 {
@@ -195,4 +195,21 @@
 
 ul.menu a.is-active {
   color: var(--color-teal-400);
+}
+
+/* Universal Header FOUC (Design System) */
+
+m-universal-header {
+  display: block;
+  min-height: 37px;
+}
+
+m-universal-header:not(.hydrated) {
+  background: var(--color-blue-100);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+m-universal-header.hydrated {
+  opacity: 1;
 }
