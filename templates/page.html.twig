@@ -50,54 +50,13 @@
     </div>
   </header>
   
-{# Warning banner #}
-{{ include('umlib_theme:banner', {
-  type: 'warning',
-  message: 'This site is the development site for umlib_theme.'
-}) }}
-
   <div class="viewport-container">
     {{ page.breadcrumb }}
     {{ page.pre_content }}
 
-<p>Edit as needed and be sure to CLEAR CACHE at either<br>
-<em><a href="admin/config/development/performance">admin/config/development/performance</a></em><br>
-or use <em>drush cr</em> at the docker container root to see changes.</p>
-{#END DELETE#}
-
-<h2>SDC Testing</h2>
-{# Modal Test DELETE#}
-{# Small modal #}
-{{ include('umlib_theme:modal', {
-  id: 'small-modal',
-  heading: 'Small Modal',
-  size: 'small',
-  content: '<p>This is a small modal.</p>'
-}) }}
-
-{# Medium modal (default) #}
-{{ include('umlib_theme:modal', {
-  id: 'medium-modal',
-  heading: 'Medium Modal',
-  content: '<p>This is a medium modal.</p>'
-}) }}
-
-{# Large modal #}
-{{ include('umlib_theme:modal', {
-  id: 'large-modal',
-  heading: 'Large Modal',
-  size: 'large',
-  content: '<p>This is a large modal with more content.</p>'
-}) }}
-
-<button class="button button--primary" type="button" data-modal-trigger="small-modal">Open Small Modal</button>
-<button class="button button--secondary" type="button" data-modal-trigger="medium-modal">Open Medium Modal</button>
-<button class="button button--ghost" type="button" data-modal-trigger="large-modal">Open Large Modal</button>
-
-{#END DELETE#}
-
-    <main class="page-content clearfix" role="main">
-      <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+  <main class="page-content clearfix" role="main">
+      <div class="visually-hidden">
+        <div id="main-content" tabindex="-1"></div></div>
       {{ page.highlighted }}
       {% if page.help %}
         <div class="help">
