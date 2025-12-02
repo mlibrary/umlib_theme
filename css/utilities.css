@@ -1,11 +1,12 @@
 /**
-* U-M Library Design System - Utlities
+* U-M Library Design System - Utilities
 *
 * Table of Contents:
 * 1. Spacing utilities
 * 2. Display utilities
 * 3. Responsive layout
 * 4. Scroll shadows
+* 5. Text decoration 
 **/
 
 /* 1. Spacing utilities */
@@ -163,4 +164,10 @@
   background-attachment: local, scroll, local, scroll;
   background-size: 100% 100%, 100% var(--shadow-size), 100% 100%,
     100% var(--shadow-size);
+}
+
+/* 5. Text decoration */
+
+.underline {
+  text-decoration: underline !important;
 }

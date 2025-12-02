@@ -19,6 +19,10 @@
   line-height: 0;
 }
 
+.site-slogan {
+  margin-left: .5rem;
+}
+
 .site-name a {
   display: flex;
   flex-flow: row wrap;
@@ -157,10 +161,14 @@
     margin-top: 1rem;
     }
 
+  .region-header > .block-menu > ul.menu {
+    margin-left: 0;
+  }
+
   .region-header > .menu--account > ul.menu > li  {
-      margin-left: 0;
-      padding-left: 0;
-    }
+    margin-left: 0;
+    padding-left: 0;
+   }
   }
 
 /* Adds styling for the status message in header */
@@ -195,6 +203,7 @@
 
 ul.menu a.is-active {
   color: var(--color-teal-400);
+  text-decoration: underline;
 }
 
 /* Universal Header FOUC (Design System) */
