@@ -35,3 +35,13 @@
   box-shadow: 0 0 0 2px #fff,0 0 0 3px var(--color-neutral-400);
   background: #fff;
 }
+
+/* Views Forms for alignment of form elements */
+
+.views-exposed-form.views-exposed-form {
+  align-items: flex-end;
+}
+
+.views-exposed-form.views-exposed-form input.button {
+  margin-bottom: .15rem;
+}
