@@ -11,8 +11,8 @@
   font-size: 1rem;
 }
 
-.form-item__description {
-  font-size: var(--font-size-s);
+.form-item__description, .fieldset__description {
+  font-size: .95rem;
 }
 
 .form-item__label.form-required::after,

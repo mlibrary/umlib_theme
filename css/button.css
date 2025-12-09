@@ -5,6 +5,7 @@
 * 1. Button
 * 2. Primary
 * 3. Secondary, Critical, Ghost, Search
+* 4. Button Overrides- Small, Extra small
 *
 */
 
@@ -19,7 +20,7 @@ button,
  border-radius: var(--radius-default);
 }
 
- btn-group {
+.btn-group {
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
@@ -78,3 +79,12 @@ input[value="Search"], .button--search, input[value="Search"]:hover , .button--s
   border: solid 1px;
   color: var(--color-neutral-400);
  }
+
+ /* 4. Button Overrides- Extra small */
+
+.button--extrasmall {
+  margin-block: var(--space-s) !important;
+  margin-inline: 0 var(--space-xs) !important;
+  padding: calc(var(--space-xs) - 1px) calc(var(--space-m) - 1px) !important; /* 1 */
+  font-size: var(--font-size-xs) !important;
+}
