@@ -46,7 +46,7 @@
 }
 
 label {
-  color: var(--color-neutral-300);
+  color: var(--color-neutral-400);
   font-size: 1rem;
   font-weight: var(--bold);
   display: block;
