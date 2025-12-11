@@ -93,7 +93,7 @@ a.link-undecorated:hover {
   border: solid 2px var(--color-pink-400);
 }
 
-.action-link--small:hover {
+.action-link:hover, .action-link--small:hover {
   text-decoration: none;
   color: var(--color-teal-400);
   background-color: var(--color-teal-100);
